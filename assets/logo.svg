@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3730A3"/>
+      <stop offset="1" stop-color="#1F108E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App-style rounded square (squircle) background -->
+  <rect x="16" y="16" width="480" height="480" rx="120" fill="url(#bg)"/>
+
+  <!-- Income arrow (incoming): green, sweeping down into the coin on the left -->
+  <path d="M150 150 A140 140 0 0 0 150 362"
+        stroke="#059669" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <path d="M150 362 l-30 -34 M150 362 l34 -22"
+        stroke="#059669" stroke-width="26" stroke-linecap="round" fill="none"/>
+
+  <!-- Expense arrow (outgoing): red, sweeping up out of the coin on the right -->
+  <path d="M362 362 A140 140 0 0 0 362 150"
+        stroke="#E11D48" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <path d="M362 150 l30 34 M362 150 l-34 22"
+        stroke="#E11D48" stroke-width="26" stroke-linecap="round" fill="none"/>
+
+  <!-- Center coin -->
+  <circle cx="256" cy="256" r="104" fill="#FFFFFF"/>
+  <circle cx="256" cy="256" r="104" fill="none" stroke="#85F8C4" stroke-width="8"/>
+
+  <!-- "Rp" mark -->
+  <text x="256" y="292" text-anchor="middle"
+        font-family="Lexend, Arial, sans-serif" font-size="92" font-weight="700" fill="#3730A3">Rp</text>
+</svg>
