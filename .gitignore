@@ -1,0 +1,102 @@
+# ---------------------------------------------------------------------------
+# Prosperity Tracker — .gitignore
+# Stack: Android + Kotlin + Gradle (Kotlin DSL) + Room (KSP) + Jetpack Compose
+# ---------------------------------------------------------------------------
+
+# ----- Gradle build output -----
+# Hasil build dan cache Gradle: ribuan file, di-regenerate setiap build.
+.gradle/
+build/
+out/
+**/build/
+
+# ----- Android Studio / IntelliJ IDEA -----
+# Konfigurasi IDE sebagian besar bersifat lokal/spesifik mesin.
+# Catatan: beberapa tim memilih commit file tertentu di .idea/ (codeStyle, dictionaries).
+# Untuk proyek pribadi ini, lebih sederhana ignore seluruhnya.
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Captures (CPU/memory profiling) dan log debugging Android Studio.
+captures/
+.navigation/
+*.hprof
+
+# ----- Konfigurasi lokal / mesin spesifik -----
+# Berisi path absolut SDK Android di mesin lokal. JANGAN di-commit.
+local.properties
+
+# ----- Signing key & kredensial (KRITIS - jangan pernah commit) -----
+*.jks
+*.keystore
+keystore.properties
+release.properties
+signing.properties
+
+# ----- Output APK / AAB di luar folder build (kalau ada) -----
+*.apk
+*.aab
+release/
+
+# ----- KSP / annotation processing -----
+# KSP menulis kode generated ke build/, sudah tercover.
+# Tidak ada folder kapt karena proyek pakai KSP, bukan kapt.
+
+# ----- Native build (tidak dipakai proyek ini, tapi standar Android) -----
+.cxx/
+
+# ----- Kotlin -----
+.kotlin/
+
+# ----- JVM crash dumps -----
+hs_err_pid*
+replay_pid*
+
+# ----- Log -----
+*.log
+
+# ----- OS: macOS -----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# ----- OS: Windows -----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ----- OS: Linux -----
+*~
+.directory
+.Trash-*
+
+# ----- Editor: Vim -----
+*.swp
+*.swo
+*.swn
+
+# ----- Editor: VS Code (opsional, kalau pernah dipakai sampingan) -----
+.vscode/
+
+# ----- Editor: Sublime / Atom -----
+*.sublime-workspace
+*.sublime-project
+
+# ----- File hasil kompres lokal proyek ini -----
+# Kalau kamu re-zip sumber untuk dibagikan, simpan zip di luar repo.
+ProsperityTracker.zip
+
+# ---------------------------------------------------------------------------
+# Yang SENGAJA tidak diabaikan (referensi, jangan dihapus dari proyek):
+#   gradle/wrapper/gradle-wrapper.properties  -> bagian dari Gradle Wrapper
+#   gradle/wrapper/gradle-wrapper.jar         -> bagian dari Gradle Wrapper
+#   gradlew, gradlew.bat                       -> skrip wrapper, harus di-commit
+#   preview.html                               -> prototipe HTML
+#   assets/logo.svg                            -> logo full-color
+#   PANDUAN_DEPLOY.md, README.md               -> dokumentasi
+# ---------------------------------------------------------------------------
