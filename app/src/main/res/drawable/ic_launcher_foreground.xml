@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Income arrow (green), sweeping in on the left -->
+    <path
+        android:strokeColor="#059669"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:pathData="M40 30 A30 30 0 0 0 40 78 M40 78 l-7 -8 M40 78 l8 -5" />
+
+    <!-- Expense arrow (red), sweeping out on the right -->
+    <path
+        android:strokeColor="#E11D48"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:pathData="M68 78 A30 30 0 0 0 68 30 M68 30 l7 8 M68 30 l-8 5" />
+
+    <!-- Center coin -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38 54 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0" />
+    <path
+        android:strokeColor="#85F8C4"
+        android:strokeWidth="2.5"
+        android:pathData="M38 54 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0" />
+</vector>

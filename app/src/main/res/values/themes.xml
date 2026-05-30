@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+        Compose drives the in-app colors. This XML theme only configures the window:
+        a light status bar over the app's light surface color. Using the framework
+        Material theme avoids needing the AppCompat / Material Components dependency.
+    -->
+    <style name="Theme.ProsperityTracker" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#F8F9FF</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">#F8F9FF</item>
+    </style>
+</resources>
