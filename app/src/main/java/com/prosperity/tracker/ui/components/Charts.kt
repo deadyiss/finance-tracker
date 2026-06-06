@@ -38,6 +38,9 @@ data class DonutSlice(val label: String, val value: Long, val color: Color)
 /**
  * Donut chart with a centered caption. Slices are proportional to value; a
  * neutral full ring is drawn when every value is zero.
+ *
+ * Sized at 220dp with a 36dp stroke so the inner hole comfortably fits a full
+ * Rupiah string (e.g. "Rp 15.452.253") on one line without truncation.
  */
 @Composable
 fun DonutChart(
@@ -47,9 +50,9 @@ fun DonutChart(
     modifier: Modifier = Modifier
 ) {
     val total = slices.sumOf { it.value }
-    Box(modifier = modifier.size(180.dp), contentAlignment = Alignment.Center) {
-        Canvas(modifier = Modifier.size(180.dp)) {
-            val strokeWidth = 34.dp.toPx()
+    Box(modifier = modifier.size(220.dp), contentAlignment = Alignment.Center) {
+        Canvas(modifier = Modifier.size(220.dp)) {
+            val strokeWidth = 36.dp.toPx()
             val inset = strokeWidth / 2
             val arcSize = Size(size.width - strokeWidth, size.height - strokeWidth)
             val topLeft = Offset(inset, inset)
@@ -82,9 +85,19 @@ fun DonutChart(
                 startAngle += sweep
             }
         }
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.padding(horizontal = 8.dp)
+        ) {
             Text(centerTitle, color = OnSurfaceVariant, fontSize = 13.sp)
-            Text(centerValue, color = Primary, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+            Spacer(Modifier.height(4.dp))
+            Text(
+                centerValue,
+                color = Primary,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold,
+                maxLines = 1
+            )
         }
     }
 }

@@ -45,8 +45,8 @@
   /* donut */
   .donut-wrap{display:flex;justify-content:center;padding:8px 0 4px;position:relative;}
   .donut-wrap .center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
-  .donut-wrap .center .t{font-size:11px;color:var(--on-var);}
-  .donut-wrap .center .v{font-size:14px;font-weight:700;color:var(--primary);}
+  .donut-wrap .center .t{font-size:12px;color:var(--on-var);margin-bottom:4px;}
+  .donut-wrap .center .v{font-size:16px;font-weight:700;color:var(--primary);white-space:nowrap;}
   .legend{display:flex;align-items:center;justify-content:space-between;padding:6px 0;font-size:14px;color:var(--on);}
   .legend .l{display:flex;align-items:center;gap:10px;}
   .legend .sw{width:12px;height:12px;border-radius:50%;}
@@ -369,7 +369,7 @@ window.addEventListener("keydown",e=>{
 // ---------- Donut ----------
 function donut(targetId, centerId, data, total){
   if(total<=0){
-    $(targetId).innerHTML = `<svg width="170" height="170" viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#DCE9FF" stroke-width="6"/></svg>`;
+    $(targetId).innerHTML = `<svg width="210" height="210" viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#DCE9FF" stroke-width="6"/></svg>`;
     $(centerId).textContent = rupiah(0);
     return;
   }
@@ -379,7 +379,7 @@ function donut(targetId, centerId, data, total){
     seg += `<circle cx="21" cy="21" r="15.9" fill="none" stroke="${d.color}" stroke-width="6" stroke-dasharray="${p} ${100-p}" stroke-dashoffset="${-off}"/>`;
     off += p;
   });
-  $(targetId).innerHTML = `<svg width="170" height="170" viewBox="0 0 42 42" style="transform:rotate(-90deg)">${seg}</svg>`;
+  $(targetId).innerHTML = `<svg width="210" height="210" viewBox="0 0 42 42" style="transform:rotate(-90deg)">${seg}</svg>`;
   $(centerId).textContent = rupiah(total);
 }
 
