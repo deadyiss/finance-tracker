@@ -4,6 +4,8 @@ Aplikasi pencatat keuangan pribadi untuk Android. Berjalan **sepenuhnya offline*
 
 Antarmuka berbahasa Indonesia. Mata uang Rupiah (IDR), disimpan sebagai bilangan bulat (boleh negatif untuk akun seperti kartu kredit).
 
+## Preview Aplikasi
+Link : https://deadyiss.github.io/finance-tracker/
 ## Fitur
 
 - **Beranda** — total saldo (jumlah seluruh akun), ringkasan pemasukan/pengeluaran bulan berjalan, donut kategori, daftar transaksi terbaru.
